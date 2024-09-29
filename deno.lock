@@ -3,7 +3,9 @@
   "packages": {
     "specifiers": {
       "jsr:@std/assert@1": "jsr:@std/assert@1.0.6",
-      "jsr:@std/internal@^1.0.4": "jsr:@std/internal@1.0.4"
+      "jsr:@std/internal@^1.0.4": "jsr:@std/internal@1.0.4",
+      "npm:@envelop/core@^5.0.2": "npm:@envelop/core@5.0.2",
+      "npm:graphql@^16.9.0": "npm:graphql@16.9.0"
     },
     "jsr": {
       "@std/assert@1.0.6": {
@@ -15,12 +17,41 @@
       "@std/internal@1.0.4": {
         "integrity": "62e8e4911527e5e4f307741a795c0b0a9e6958d0b3790716ae71ce085f755422"
       }
+    },
+    "npm": {
+      "@envelop/core@5.0.2": {
+        "integrity": "sha512-tVL6OrMe6UjqLosiE+EH9uxh2TQC0469GwF4tE014ugRaDDKKVWwFwZe0TBMlcyHKh5MD4ZxktWo/1hqUxIuhw==",
+        "dependencies": {
+          "@envelop/types": "@envelop/types@5.0.0",
+          "tslib": "tslib@2.7.0"
+        }
+      },
+      "@envelop/types@5.0.0": {
+        "integrity": "sha512-IPjmgSc4KpQRlO4qbEDnBEixvtb06WDmjKfi/7fkZaryh5HuOmTtixe1EupQI5XfXO8joc3d27uUZ0QdC++euA==",
+        "dependencies": {
+          "tslib": "tslib@2.7.0"
+        }
+      },
+      "graphql@16.9.0": {
+        "integrity": "sha512-GGTKBX4SD7Wdb8mqeDLni2oaRGYQWjWHGKPQ24ZMnUtKfcsVoiv4uX8+LJr1K6U5VW2Lu1BwJnj7uiori0YtRw==",
+        "dependencies": {}
+      },
+      "tslib@2.7.0": {
+        "integrity": "sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==",
+        "dependencies": {}
+      }
     }
   },
   "remote": {},
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@envelop/core@^5.0.2",
+        "npm:graphql@^16.9.0"
+      ]
+    }
   }
 }
